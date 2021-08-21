@@ -5,6 +5,9 @@ import { NavLink } from "react-router-dom";
 import { Navbar, NavItem, Input, Container } from "reactstrap";
 // import openIcon from "../assets/images/icons/hamburger.png";
 // import logo from "../assets/images/logo.png";
+import fb from "../../assets/images/icons/fb.png";
+import insta from "../../assets/images/icons/insta.png";
+import yt from "../../assets/images/icons/yt.png";
 // import close from "../assets/images/icons/close.svg";
 import Fade from "react-reveal/Fade";
 
@@ -56,12 +59,9 @@ const Header = (props) => {
           <Container>
             <NavLink to='/'>
               {/* <img src={logo} alt='logo' /> */}
-              <p>Logo</p>
+              <p className='logo-header'>Logo</p>
             </NavLink>
 
-            <div className='searchBarWrap'>
-              <Input type='text' placeholder='Search' className='searchBar' />
-            </div>
             <div className='navFlex'>
               <NavItem>
                 <NavLink
@@ -78,7 +78,7 @@ const Header = (props) => {
                   to='/services'
                   className='headerLink'
                   activeClassName='active'>
-                  Services
+                  Collections
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -87,7 +87,7 @@ const Header = (props) => {
                   to='/gallery'
                   className='headerLink'
                   activeClassName='active'>
-                  Gallery
+                  About Us
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -97,6 +97,33 @@ const Header = (props) => {
                   className='headerLink'
                   activeClassName='active'>
                   Contact Us
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  to='/contact-us'
+                  className='headerLink'
+                  activeClassName='active'>
+                  <img src={yt} alt='fb' className='headerIcons' />
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  to='/contact-us'
+                  className='headerLink'
+                  activeClassName='active'>
+                  <img src={insta} alt='fb' className='headerIcons' />
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  exact
+                  to='/contact-us'
+                  className='headerLink'
+                  activeClassName='active'>
+                  <img src={fb} alt='fb' className='headerIcons' />
                 </NavLink>
               </NavItem>
             </div>
